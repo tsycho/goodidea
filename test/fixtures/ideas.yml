@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ideator_id: 1
+  observer_id: 1
+  description: MyString
+
+two:
+  ideator_id: 1
+  observer_id: 1
+  description: MyString

@@ -1,2 +1,20 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div id="all_counters">
+  <% @users.each do |user| %>
+    <div class="person_counter">
+      <div class="person">
+        <%= user.name %>
+      </div>
+      <div class="counter">
+        <%= user.good_count %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="all_ideas">
+  <% @ideas.each do |idea| %>
+    <div class="ideator"><%= idea.ideator ? idea.ideator.name : "" %></div>
+    <div class="observer"><%= idea.observer ? idea.observer.name : "" %></div>
+    <div class="description"><%= idea.description %></div>
+  <% end %>
+</div>
