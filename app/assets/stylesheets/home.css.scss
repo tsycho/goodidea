@@ -8,6 +8,13 @@ $person_counter_size : 160px;
   align-items: center;
   align-content: center;
 
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  -webkit-align-content: center;
+
   border-bottom: 2px solid #aaa;
 
   .person_counter {
@@ -17,10 +24,16 @@ $person_counter_size : 160px;
     margin: 30px;
 
     background-color: #aaa;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
 
     .person {
       font-family: 'Slabo 27px', serif;
@@ -38,6 +51,10 @@ $person_counter_size : 160px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 
   border-bottom: 2px solid #aaa;
   font-family: 'Slabo 27px', serif;
@@ -84,6 +101,11 @@ $person_counter_size : 160px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 
   form {
     font-family: 'Slabo 27px', serif;
