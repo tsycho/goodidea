@@ -1,4 +1,12 @@
-<div id="all_counters">
+<% content_for :head do %>
+<%= stylesheet_link_tag    "home" %>
+<%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" %>
+<%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Slabo+27px" %>
+<!-- <link href='http://fonts.googleapis.com/css?family=Poiret+One|Shadows+Into+Light|Alegreya|Yanone+Kaffeesatz|Roboto+Condensed|Slabo+27px' rel='stylesheet' type='text/css'>
+ --><!-- <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'> -->
+<% end %>
+
+<div id="all_counters" class="row">
   <% @users.each do |user| %>
     <div class="person_counter">
       <div class="person">
@@ -11,10 +19,19 @@
   <% end %>
 </div>
 
-<div id="all_ideas">
+<div id="all_ideas" class="row">
+  <table>
+    <tr class="header">
+      <th class="ideator">Ideator</th>
+      <th class="observer">Observer</th>
+      <th class="description">Description</th>
+    </tr>
   <% @ideas.each do |idea| %>
-    <div class="ideator"><%= idea.ideator ? idea.ideator.name : "" %></div>
-    <div class="observer"><%= idea.observer ? idea.observer.name : "" %></div>
-    <div class="description"><%= idea.description %></div>
+    <tr>
+      <td class="ideator"><%= idea.ideator ? idea.ideator.name : "" %></td>
+      <td class="observer"><%= idea.observer ? idea.observer.name : "" %></td>
+      <td class="description"><%= idea.description %></td>
+    </tr>
   <% end %>
+  </table>
 </div>
