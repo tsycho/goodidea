@@ -24,14 +24,31 @@
     <tr class="header">
       <th class="ideator">Ideator</th>
       <th class="observer">Observer</th>
-      <th class="description">Description</th>
+      <th class="description">Description</th>      
     </tr>
   <% @ideas.each do |idea| %>
     <tr>
       <td class="ideator"><%= idea.ideator ? idea.ideator.name : "" %></td>
       <td class="observer"><%= idea.observer ? idea.observer.name : "" %></td>
       <td class="description"><%= idea.description %></td>
+      <td class="delete">x</td>
     </tr>
   <% end %>
   </table>
+</div>
+
+<% user_options = @users.map { |user| [ user.name, user.id ] } %>
+<div id="new_idea" class="row">
+  <%= form_tag("/home/create") do |form| %>
+    <%= label_tag(:ideator_id, "Ideator") %>
+    <%= select_tag(:ideator_id, options_for_select(user_options, user_options.first.last)) %>
+
+    <%= label_tag(:observer_id, "Observer") %>
+    <%= select_tag(:observer_id, options_for_select(user_options, user_options.first.last)) %>
+
+    <%= label_tag(:description, "Description") %>
+    <%= text_field_tag(:description) %>
+
+    <%= submit_tag("Add new idea", :class => "button") %>
+  <% end %>
 </div>

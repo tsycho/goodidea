@@ -63,5 +63,35 @@ $person_counter_size : 160px;
       padding: 10px 20px;
       text-align: center;
     }
-  } 
+
+    .delete {
+      font-family: sans-serif;
+      color: #a00;
+    }
+  }
+}
+
+#new_idea {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #description {
+    min-width: 400px;
+    width: 100%;
+  }
+
+  option {
+    text-align: center;
+  }
 }
