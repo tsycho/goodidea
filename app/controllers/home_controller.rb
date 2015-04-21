@@ -12,4 +12,15 @@ class HomeController < ApplicationController
     Ideas.create(:ideator_id => ideator_id, :observer_id => observer_id, :description => desc)
     redirect_to :root
   end
+
+  def delete
+    begin
+      idea_id = params["idea_id"]
+      idea = Ideas.find(idea_id)
+      idea.delete if idea
+    rescue Exception => e      
+    end
+    
+    redirect_to :root
+  end
 end

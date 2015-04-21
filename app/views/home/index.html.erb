@@ -31,7 +31,12 @@
       <td class="ideator"><%= idea.ideator ? idea.ideator.name : "" %></td>
       <td class="observer"><%= idea.observer ? idea.observer.name : "" %></td>
       <td class="description"><%= idea.description %></td>
-      <td class="delete">x</td>
+      <td>
+        <%= form_tag("/home/delete") do %>
+          <input name="idea_id" type="hidden" value="<%= idea.id %>" />
+          <%= submit_tag("x", :class => "delete") %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
   </table>
