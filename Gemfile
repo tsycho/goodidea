@@ -27,3 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'foundation-rails'
+
+group :production do
+  gem 'pg', '~>0.13.2'
+end
+
