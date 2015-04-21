@@ -114,7 +114,8 @@ $person_counter_size : 160px;
   }
 
   #description {
-    min-width: 400px;
+    min-width: 300px;
+    max-width: 600px;
     width: 100%;
   }
 }
