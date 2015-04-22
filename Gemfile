@@ -26,6 +26,8 @@ gem 'spring',        group: :development
 
 gem 'foundation-rails', '~> 5.3.1'
 
+gem 'httparty'
+
 group :development, :test do
   gem 'sqlite3'
 end
